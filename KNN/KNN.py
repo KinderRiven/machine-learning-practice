@@ -36,6 +36,7 @@ class KNN:
                 vector.append(int(line[i]))
         vector_mat = tile(vector, (self.train_matrix.shape[0], 1))
         diff_mat = self.train_matrix - vector_mat
+        print type(self.train_matrix), type(vector_mat), type(diff_mat)
         sq2_mat = diff_mat**2
         sum_mat = sq2_mat.sum(1)
         dist_mat = sum_mat**0.5
